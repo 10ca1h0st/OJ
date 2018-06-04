@@ -1,3 +1,9 @@
+/*
+* AUTHOR:Ren Xujie
+* DATE:2018-6-5
+* CODE DESCRIPTION:COUNT THE NUMBER OF k'S BETWEEN 0 AND N. k CAN BE 0 - 9.
+*/
+
 #include<stdio.h>
 #include<math.h>
 
