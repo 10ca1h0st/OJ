@@ -1,3 +1,9 @@
+/*
+* AUTHOR:Ren Xujie
+* DATE:2018-6-9
+* CODE DESCRIPTION:REPLACE SPACES BY STRING '%20'
+*/
+
 #include<stdio.h>
 #include<stdlib.h>
 
@@ -10,7 +16,7 @@ void replaceSpace(char *str,int length){
 	    for (;str[i]!='\0';){
 		    i++;
     		if(str[i]==' ')
-	    		countofspace++;
+	    		countofspace++;		//计算空格数
     	}
     	
 	    int strlen=i+1;
@@ -18,14 +24,14 @@ void replaceSpace(char *str,int length){
     	if(strlen>=length)
     		return;
 	    
-    	int finallen=strlen+countofspace*2+1;
+    	int finallen=strlen+countofspace*2+1;		//最终字符串长度=原字符串长度+空格数*2  （每将一个空格替换为“%20”，字符串长度+2）
 	
     	char *strreplace;
         strreplace=str+finallen;
 	
     	for(i=0;i>=finallen;i++){		
-	    	if(*(str+finallen-i)==' '){
-		    	*strreplace--='0';
+	    	if(*(str+finallen-i)==' '){		
+		    	*strreplace--='0';		//从字符串（指针）尾部开始寻找空格并替换
 		    	printf("strreplace=%c\n",*(strreplace+1));
 		    	*strreplace--='2';
 		    	printf("strreplace=%c\n",*(strreplace+1));
