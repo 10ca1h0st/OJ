@@ -14,7 +14,7 @@
 	    int m,a;
 	    int arr[n];
         for(;i<=n;i++){
-        arr[i]=i;
+        arr[i]=i;		//初始化数组
 //      printf("%d\n",arr[i]);
         }
       
@@ -23,10 +23,10 @@
 		}
 		
 		for(i=0;i<=n;i++){
-			for(a=0;a<=(int)log10(n);a++){
-				m=arr[i]/pow(10,((int)log10(n)-a));
-//				printf("pf=%d,arr=%d\n",m,arr[i]);
-				if((m-k)%10==0){
+			for(a=0;a<=(int)log10(n);a++){		//利用对数计算出数组长度位数，如数组长为15，为2位，长115，为3位
+				m=arr[i]/pow(10,((int)log10(n)-a));		//
+//				printf("pf=%d,arr=%d\n",m,arr[i]);	
+				if((m-k)%10==0){		//对10、100、1000...取余，可得到每一位的值
 					j=j+1;
 					//printf("j2=%d\n",arr[i]);
 				}
